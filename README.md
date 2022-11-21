@@ -17,7 +17,7 @@ Option = [Fighting, Healing, Blocking]  # list function for loots randomizer
 
 # START UP OPTIONS
 
-Your_Weapon = {'Excalibur': Combat['Excalibur'], 'Wooden_Sword': Combat['Wooden_Sword'], 'Punch': Combat['Punch']}
+Your_Weapon = {'Wooden_Sword': Combat['Wooden_Sword'], 'Punch': Combat['Punch']}
 Your_Potion = {'Green_Heal': Potion['Green_Heal']}
 Your_Shield = {'Bronze_Shield': Shields['Bronze_Shield']}
 Your_Health = {'Hp': 3000}
@@ -148,7 +148,7 @@ while Choice != 'n':
     print('\nLooking up to the sky you are met with a blackish-purple haze. The ground is dry with cracks going on till the horizon.')
     input('Press enter to continue')
 
-    print('\nYou feel intimidated but you have to accomplish your missin of destroying this land, you take steps forward.')
+    print('\nYou feel intimidated but you have to accomplish your mission of destroying this land, you take steps forward.')
     input('Press enter to continue')
 
     print('\nYou see a small building ahead.\nYou and the hero approach the building.')
