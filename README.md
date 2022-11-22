@@ -17,7 +17,7 @@ Option = [Fighting, Healing, Blocking]  # list function for loots randomizer
 
 # START UP OPTIONS
 
-Your_Weapon = {'Wooden_Sword': Combat['Wooden_Sword'], 'Punch': Combat['Punch']}
+Your_Weapon = {'Excalibur':Combat['Excalibur'], 'Wooden_Sword': Combat['Wooden_Sword'], 'Punch': Combat['Punch']}
 Your_Potion = {'Green_Heal': Potion['Green_Heal']}
 Your_Shield = {'Bronze_Shield': Shields['Bronze_Shield']}
 Your_Health = {'Hp': 3000}
@@ -239,11 +239,11 @@ while Choice != 'n':
               elif Picked_Hero[Protect] < Mammon['Punch']:
                 Picked_Hero[Hp] -= ((Mammon['Punch'] - Picked_Hero[Protect]) / 2)
             elif O_1 == 'Shield' and H_1_C != Picked_Hero[Protect]:
-              Your_Health['Hp'] -= Mammon['Punch']
-              if Picked_Hero[Protect] >= Mammon['Punch']:  
+              Picked_Hero[Hp] -= Mammon['Punch']
+              if Your_Shield[S] >= Mammon['Punch']:  
                 print('You block Mammons damage')
-              elif Picked_Hero[Protect] < Mammon['Punch']:
-                Picked_Hero[Hp] -= ((Mammon['Punch'] - Picked_Hero[Protect]) / 2)
+              elif Your_Shield[S] < Mammon['Punch']:
+                Your_Health['Hp'] -= ((Mammon['Punch'] - Your_Shield[S]) / 2)
             elif O_1 == 'Shield' and H_1_C == Picked_Hero[Protect]:
                 if Your_Shield[S] >= Mammon['Punch'] and Picked_Hero[Protect] >= Mammon['Punch']: 
                     print('You and the Hero blocks Mammons damage')
@@ -419,11 +419,11 @@ while Choice != 'n':
               elif Picked_Hero[Protect] < Leviathan['Tail_Whip']:
                 Picked_Hero[Hp] -= ((Leviathan['Tail_Whip'] - Picked_Hero[Protect]) / 2)
             elif O_2 == 'Shield' and H_1_C != Picked_Hero[Protect]:
-              Your_Health['Hp'] -= Leviathan['Tail_Whip']
-              if Picked_Hero[Protect] >= Leviathan['Tail_Whip']:  
+              Picked_Hero[Hp] -= Leviathan['Tail_Whip']
+              if Your_Shield[S] >= Leviathan['Tail_Whip']:  
                 print('You block Leviathans damage')
-              elif Picked_Hero[Protect] < Leviathan['Tail_Whip']:
-                Picked_Hero[Hp] -= ((Leviathan['Tail_Whip'] - Picked_Hero[Protect]) / 2)
+              elif Your_Shield[S] < Leviathan['Tail_Whip']:
+                Your_Health['Hp'] -= ((Leviathan['Tail_Whip'] - Your_Shield[S]) / 2)
             elif O_2 == 'Shield' and H_1_C == Picked_Hero[Protect]:
                 if Your_Shield[S] >= Leviathan['Tail_Whip'] and Picked_Hero[Protect] >= Leviathan['Tail_Whip']: 
                     print('You and the Hero blocks Leviathans damage')
@@ -472,13 +472,13 @@ while Choice != 'n':
       print('\nLeviathan: I can not believe you killed me.')
       print('You have defeated Leviathon')
 
-    if Loot_2 == Combat:
+    if Loot_2 == Fighting:
         Your_Weapon[Loot_2_2] = Loot_2_2_3
-    elif Loot_2 == Potion:
+    elif Loot_2 == Healing:
         Your_Potion[Loot_2_2] = Loot_2_2_3
-    elif Loot_2 == Potion:
+    elif Loot_2 == Blocking:
         Your_Shield[Loot_2_2] = Loot_2_2_3
-
+      
   #  Destruction prompt cont.
     print('\nYou think to yourself "I want to destroy" ')
     Destroy_2 = input('Shall you destroy Leviathans hideout(y, n)?')
@@ -594,11 +594,11 @@ while Choice != 'n':
                 elif Picked_Hero[Protect] < Lucifer['Dragon_Claw']:
                     Picked_Hero[Hp] -= ((Lucifer['Dragon_Claw'] - Picked_Hero[Protect]) / 2)
             elif O_3 == 'Shield' and H_1_C != Picked_Hero[Protect]:
-                Your_Health['Hp'] -= Lucifer['Dragon_Claw']
-                if Picked_Hero[Protect] >= Lucifer['Dragon_Claw']:  
+                Picked_Hero[Hp] -= Lucifer['Dragon_Claw']
+                if Your_Shield[S] >= Lucifer['Dragon_Claw']:  
                     print('You block Lucifers damage')
-                elif Picked_Hero[Protect] < Lucifer['Dragon_Claw']:
-                    Picked_Hero[Hp] -= ((Lucifer['Dragon_Claw'] - Picked_Hero[Protect]) / 2)
+                elif Your_Shield[S] < Lucifer['Dragon_Claw']:
+                    Your_Health['Hp'] -= ((Lucifer['Dragon_Claw'] - Your_Shield[S]) / 2)
             elif O_3 == 'Shield' and H_1_C == Picked_Hero[Protect]:
                 if Your_Shield[S] >= Lucifer['Dragon_Claw'] and Picked_Hero[Protect] >= Lucifer['Dragon_Claw']: 
                     print('You and the Hero blocks Lucifers damage')
@@ -649,11 +649,11 @@ while Choice != 'n':
 
         #YOU OBTAIN A LOOT ITEM
 
-    if Loot_3 == Combat:
+    if Loot_3 == Fighting:
         Your_Weapon[Loot_3_2] = Loot_3_2_3
-    elif Loot_3 == Potion:
+    elif Loot_3 == Healing:
         Your_Potion[Loot_3_2] = Loot_3_2_3
-    elif Loot_3 == Potion:
+    elif Loot_3 == Blocking:
         Your_Shield[Loot_3_2] = Loot_3_2_3
       
     print('\nYou think to yourself "I want to destroy" ')
@@ -680,11 +680,11 @@ while Choice != 'n':
     print('\n{}: here hopefully youll be able to make some use out of it'.format(Hname))
     input('Press enter to continue')
   
-    if Loot_4 in Combat:
+    if Loot_4 in Fighting:
         Your_Weapon[Loot_4] = Combat[Loot_4]
-    elif Loot_4 in Shields:
+    elif Loot_4 in Blocking:
         Your_Shield[Loot_4] = Shields[Loot_4]
-    elif Loot_4 in Potion:
+    elif Loot_4 in Healing:
         Your_Potion[Loot_4] = Potion[Loot_4]
 
     print('\nYou now obtain the item {}'.format(Loot_4))
@@ -787,11 +787,11 @@ while Choice != 'n':
                       elif Picked_Hero[Protect] < Satan['Storm_Bringer']:
                         Picked_Hero[Hp] -= ((Satan['Storm_Bringer'] - Picked_Hero[Protect]) / 2)
                     elif O_4 == 'Shield' and H_1_C != Picked_Hero[Protect]:
-                      Your_Health['Hp'] -= Satan['Storm_Bringer']
-                      if Picked_Hero[Protect] >= Satan['Storm_Bringer']:  
+                      Picked_Hero[Hp] -= Satan['Storm_Bringer']
+                      if Your_Shield[S] >= Satan['Storm_Bringer']:  
                         print('You block Satans damage')
-                      elif Picked_Hero[Protect] < Satan['Storm_Bringer']:
-                        Picked_Hero[Hp] -= ((Satan['Storm_Bringer'] - Picked_Hero[Protect]) / 2)
+                      elif Your_Shield[S] < Satan['Storm_Bringer']:
+                        Your_Health['Hp'] -= ((Satan['Storm_Bringer'] - Your_Shield[S]) / 2)
                     elif O_4 == 'Shield' and H_1_C == Picked_Hero[Protect]:
                         if Your_Shield[S] >= Satan['Storm_Bringer'] and Picked_Hero[Protect] >= Satan['Storm_Bringer']: 
                             print('You and the Hero blocks Satans damage')
@@ -891,5 +891,7 @@ while Choice != 'n':
       print('\nYou chose the bad ending')
       input('Press enter to continue')
 
-    Choice = input('\nGame Over.\nWould You like to play again?(y, n)')
-    
+    ChoiceChoice = input('\nGame Over.\nWould You like to play again?(y, n)')
+    while Choice != 'y' or Choice != 'n':
+      print('Enter one of the options')
+      Choice = input('\nGame Over.\nWould You like to play again?(y, n)')
