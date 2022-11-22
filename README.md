@@ -17,7 +17,7 @@ Option = [Fighting, Healing, Blocking]  # list function for loots randomizer
 
 # START UP OPTIONS
 
-Your_Weapon = {'Excalibur':Combat['Excalibur'], 'Wooden_Sword': Combat['Wooden_Sword'], 'Punch': Combat['Punch']}
+Your_Weapon = {'Wooden_Sword': Combat['Wooden_Sword'], 'Punch': Combat['Punch']}
 Your_Potion = {'Green_Heal': Potion['Green_Heal']}
 Your_Shield = {'Bronze_Shield': Shields['Bronze_Shield']}
 Your_Health = {'Hp': 3000}
