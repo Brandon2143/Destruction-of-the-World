@@ -6,7 +6,7 @@ import random
 
 Combat = {'Excalibur': 500, 'Wooden_Sword': 15, 'Obsidian_Sword': 35,
           'Diamond_Gauntlets': 30, 'Punch': 10}  # Setup dict. for all Shields, Swords, and Potions
-Shields = {'Heroes_shield': 50, 'Bronze_Shield': 15, 'Diamond_Shield': 30, 'Obsidian_Shield': 35}
+Shields = {'Heroes_Shield': 50, 'Bronze_Shield': 15, 'Diamond_Shield': 30, 'Obsidian_Shield': 35}
 Potion = {'Blue_Heal': 50, 'Red_Heal': 40, 'Yellow_Heal': 30, 'Green_Heal': 20}
 
 Fighting = {'Excalibur': 500, 'Wooden_Sword': 15, 'Obsidian_Sword': 35,
